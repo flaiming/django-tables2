@@ -168,7 +168,8 @@ class TableOptions:
             str: ["template_name", "prefix", "order_by_field", "page_field", "per_page_field"],
             (dict,): ["attrs", "row_attrs", "pinned_row_attrs"],
             (tuple, list, str): ["order_by"],
-            (type(models.Model),): ["model"],
+            # Commented because it was causing errors at django-crudbuilder
+            #(type(models.Model),): ["model"],
         }
 
         for types, keys in checks.items():
